@@ -46,11 +46,6 @@ class LoadingPainter extends CustomPainter {
 
     // Function to draw shadow and then the arc
     void drawArcWithShadow(Rect rect, double startAngle, double sweepAngle) {
-      final Path arcPath = Path()
-        ..moveTo(center.dx, center.dy)
-        ..arcTo(rect, startAngle, sweepAngle, false)
-        ..close();
-
       canvas.drawArc(rect, startAngle, sweepAngle, false, shadowPaint);
     }
 
