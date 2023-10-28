@@ -10,4 +10,4 @@ A collection of demo widgets built in flutter.
 A circular loading widget made with CustomPainter. 3 animated rings circle around indefinitely and grow as the percentage increases.
 
 ### Animated Vertical Slideshow
-A vertical slideshow widget that animates between a list of widgets. The widget is built with a PageView and a PageController. The PageController is used to animate between the widgets. The PageView is wrapped in a GestureDetector to detect swipes and change the page accordingly. The PageView is also wrapped in a Listener to detect the direction of the swipe and change the animation direction accordingly.
+A vertically scrolling PageView showcasing a list of travel destinations. The animate_do library is used to fade in the elements of each page, staggered to create a cascading effect.
