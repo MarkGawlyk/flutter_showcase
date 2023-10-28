@@ -24,12 +24,14 @@ class Destination extends StatelessWidget {
           ? Column(
               children: [
                 Expanded(
+                  flex: 3,
                   child: Content(
                     title: title,
                     body: body,
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: ImageClipper(
                     imageLoc: imageLoc,
                     bottom: bottom,
@@ -40,12 +42,14 @@ class Destination extends StatelessWidget {
           : Column(
               children: [
                 Expanded(
+                  flex: 2,
                   child: ImageClipper(
                     imageLoc: imageLoc,
                     bottom: bottom,
                   ),
                 ),
                 Expanded(
+                  flex: 3,
                   child: Content(
                     title: title,
                     body: body,
@@ -128,6 +132,35 @@ class Content extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          FadeInRight(
+            delay: const Duration(milliseconds: 2500),
+            from: 20,
+            child: Padding(
+                padding: const EdgeInsets.only(right: 25),
+                child: TextButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Text(
+                          'Explore',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromARGB(255, 61, 61, 61),
+                            letterSpacing: 1,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Color.fromARGB(255, 61, 61, 61),
+                        ),
+                      ],
+                    ))),
           ),
         ],
       ),

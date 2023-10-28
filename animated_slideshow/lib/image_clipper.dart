@@ -35,8 +35,8 @@ class TopClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     final path = Path();
     path.moveTo(size.width, 0.0);
-    path.lineTo(size.width, size.height * 0.7);
-    path.lineTo(0.0, size.height * 0.85);
+    path.lineTo(size.width, size.height * 0.85);
+    path.lineTo(0.0, size.height * 1);
     path.lineTo(0.0, 0.0);
 
     path.close();
@@ -52,8 +52,8 @@ class BottomClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     final path = Path();
     path.moveTo(size.width, size.height);
-    path.lineTo(size.width, size.height * 0.3);
-    path.lineTo(0.0, size.height * 0.15);
+    path.lineTo(size.width, size.height * 0.15);
+    path.lineTo(0.0, 0);
     path.lineTo(0.0, size.height);
 
     path.close();
